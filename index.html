@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francolino AI Studio | Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://techideia.net/genapp/style.css">
+    <style>
+        /* Paleta de Roxos Futuristas overrides */
+        :root {
+            --primary-purple: #a855f7;
+            --primary-purple-glow: #d8b4fe;
+            --neon-purple: #c026d3;
+            --dark-bg: #030005;
+            --card-bg: #0f0a15;
+            --text-main: #ffffff;
+            --text-muted: #8b5cf6;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .function-card .icon { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 6px; 
+            opacity: .9;
+            color: var(--primary-purple);
+        }
+        
+        .function-card .icon svg { 
+            width: 22px; 
+            height: 22px; 
+        }
+
+        .mode-btn { 
+            text-transform: uppercase; 
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn.active {
+            background-color: var(--primary-purple) !important;
+            color: white !important;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+
+        .generate-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--neon-purple)) !important;
+            color: white !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 25px rgba(192, 38, 211, 0.5);
+        }
+
+        .panel-title {
+            color: var(--primary-purple);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #a855f7, #e879f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prompt-input {
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            color: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .prompt-input:focus {
+            border-color: var(--primary-purple);
+            outline: none;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+
+        .function-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(139, 92, 246, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .function-card.active {
+            border-color: var(--primary-purple);
+            background: rgba(168, 85, 247, 0.1);
+            box-shadow: inset 0 0 15px rgba(168, 85, 247, 0.1);
+        }
+
+        .upload-area, .upload-area-dual {
+            border: 2px dashed rgba(168, 85, 247, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover, .upload-area-dual:hover {
+            border-color: var(--primary-purple);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .loading-spinner {
+            border-top-color: var(--primary-purple) !important;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(168, 85, 247, 0.3);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-purple);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

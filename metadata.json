@@ -1,0 +1,7 @@
+{
+  "name": "Francolino AI Studio",
+  "description": "Estúdio profissional de geração de imagens com IA em tons de roxo futurista, suportando criação e edição avançada.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
